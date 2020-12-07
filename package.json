@@ -1,0 +1,18 @@
+{
+  "name": "eptools",
+  "version": "1.0.1",
+  "description": "一些公共函数",
+  "main": "./lib/eptools.min.js",
+  "scripts": {
+    "build": "webpack --config=./webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "pretender",
+  "license": "ISC",
+  "devDependencies": {
+    "terser-webpack-plugin": "^5.0.3",
+    "webpack": "^5.9.0",
+    "webpack-cli": "^4.2.0"
+  },
+  "dependencies": {}
+}
