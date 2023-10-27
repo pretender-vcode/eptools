@@ -2,7 +2,7 @@
     项目旨在处理时间转换、数字的加减乘数等运算的一些通用函数
 ### 启动命名
 ```
-npm install eptimes --save
+npm install eptools --save
 ```
 ### 使用说明
 ``` javascript
