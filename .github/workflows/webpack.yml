@@ -26,7 +26,7 @@ jobs:
       run: |
         npm install
         npx webpack
-        
+
   publish-npm:
     needs: build
     runs-on: ubuntu-latest
@@ -36,6 +36,7 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
+      - run: npm version patch
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_PUBLISH}}
