@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+tag=$(git describe --tags `git rev-list --tags --max-count=1`)
+gitVersion=${tag##*.}
+num=$(git rev-list HEAD --count)
+echo $num
+#gitVersion =${gitVersion:0:3}${num} 
