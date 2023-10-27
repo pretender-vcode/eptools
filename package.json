@@ -1,6 +1,6 @@
 {
   "name": "eptools",
-  "version": "1.2.0",
+  "version": "1.1.0",
   "description": "一些公共函数",
   "main": "./lib/eptools.min.js",
   "scripts": {

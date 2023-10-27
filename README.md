@@ -6,7 +6,7 @@ npm install eptools --save
 ```
 ### 使用说明
 ``` javascript
-import { EPTime, EPCalculator } from 'eptools';
+import { EPTime, EPCalculator, ArrayTool } from 'eptools';
 ```
 > EPTime
 
@@ -51,3 +51,12 @@ import { EPTime, EPCalculator } from 'eptools';
 |accDel|arg1:Number<br>arg2:Number<br>original:Boolean|减法运算：前面两个参数为被减数及减数，后面为是否原样输出还是保留两位小数|EPCalculator.accDel(arg1,arg2,original)|
 |accMul|arg1:Number<br>arg2:Number<br>original:Boolean|乘法运算：前面两个参数为被乘数及乘数，后面为是否原样输出还是保留两位小数|EPCalculator.accMul(arg1,arg2,original)|
 |accDiv|arg1:Number<br>arg2:Number<br>original:Boolean|除法运算：前面两个参数为被除数及除数，后面为是否原样输出还是保留两位小数|EPCalculator.accDiv(arg1,arg2,original)|
+
+> ArrayTool
+
+| 函数 | 参数 | 说明 | 举例 |
+| ---  | --- | --- | --- |
+|getSectionArr|arg1:number[]|将一个无序数字数组从小到大进行分段：getSectionArr([1,7,4,8,10])， 返回[[1, 4], [4, 7], [7, 8], [8, 10]]|ArrayTool.getSectionArr(arg1)|
+|arr2Tree|arg1:TreeObjectType[]<br>arg2:ArrOptionType|将具有父子关系的一维数组转成树形结构：前面两个参数为数组和父子标识(id, pid)对应的字段|ArrayTool.arr2Tree(arg1,{id: 'id', pid: 'pid'},original)|
+|tree2Arr|arg1:TreeObjectType[]<br>arg2:TreeOptionType|将树形数据转为具有父子关系的一维数组，前面两个参数为树形数据和子节点标识(child)对应的字段|ArrayTool.tree2Arr(arg1,{child: 'children'},original)|
+|traverse|arg1:TreeObjectType[]|将树形数据扁平化，并返回各自的所属层级ID|ArrayTool.traverse(arg1)|
